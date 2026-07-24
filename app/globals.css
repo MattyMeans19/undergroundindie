@@ -1,1 +1,70 @@
 @import "tailwindcss";
+
+@theme {
+  --color-app-bg: var(--bg);
+  --color-app-card: var(--card);
+  --color-app-border: var(--border);
+  --color-app-accent: var(--accent);
+  --color-app-accent-hover: var(--accent-hover);
+  --color-app-secondary: var(--secondary);
+  --color-app-text: var(--text-main);
+  --color-app-muted: var(--text-muted);
+}
+
+@layer base {
+  /* ==========================================
+     THEME 1: Cyber-Industrial (Terminal Amber)
+     ========================================== */
+  :root, [data-theme="terminal-amber"] {
+    --bg: #0F0E0E;
+    --card: #181616;
+    --border: #2E2A28;
+    --accent: #FFB000;
+    --accent-hover: #E09B00;
+    --secondary: #FF6B00;
+    --text-main: #EDE8E1;
+    --text-muted: #8C827A;
+  }
+
+  /* ==========================================
+     THEME 2: Digital Underground (Acid Violet)
+     ========================================== */
+  [data-theme="acid-violet"] {
+    --bg: #0B0813;
+    --card: #130F20;
+    --border: #271F3B;
+    --accent: #CCFF00;
+    --accent-hover: #B5E000;
+    --secondary: #00F0FF;
+    --text-main: #F3EFFB;
+    --text-muted: #7A718F;
+  }
+
+  /* ==========================================
+     THEME 3: Zine / Newspaper Brutalism
+     ========================================== */
+  [data-theme="zine-brutalism"] {
+    --bg: #121212;
+    --card: #1A1A1A;
+    --border: #333333;
+    --accent: #F5F5F5;
+    --accent-hover: #FFFFFF;
+    --secondary: #FF3333;
+    --text-main: #E5E5E5;
+    --text-muted: #666666;
+  }
+
+  /* ==========================================
+     THEME 4: Analog Void (Deep Cobalt & Teal)
+     ========================================== */
+  [data-theme="analog-void"] {
+    --bg: #060A0F;
+    --card: #0C121A;
+    --border: #182535;
+    --accent: #00FFC2;
+    --accent-hover: #00D6A3;
+    --secondary: #3A86FF;
+    --text-main: #EAF2F8;
+    --text-muted: #5C7085;
+  }
+}
