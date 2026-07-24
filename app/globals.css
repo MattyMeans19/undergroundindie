@@ -68,3 +68,7 @@
     --text-muted: #5C7085;
   }
 }
+
+.sectionRowMed{
+    @apply md:row-start-2 md:row-span-10 md:border border-app-border min-h-full -mt-10; 
+}
