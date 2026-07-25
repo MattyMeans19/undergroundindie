@@ -1,38 +1,56 @@
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center md:grid grid-cols-4 grid-rows-auto md:items-start gap-2 min-h-screen w-screen bg-app-bg">
-      <h1 className="col-span-1 text-4xl tracking-wider p-3 h-fit text-app-secondary -mb-2"> ./ UnderGroundIndie</h1>
-      <div className="col-span-2 col-start-2 row-start-1 flex items-end justify-end gap-2 p-3 h-fit -mb-2">
-        <button className="text-app-text border border-app-accent hover:bg-app-accent-hover px-4 py-2 rounded-md transition-colors">
-          Access // Login
-        </button>
-        <button className="bg-app-accent text-app-bg hover:bg-app-accent-hover px-4 py-2 rounded-md transition-colors">
-          Initialize Account
-        </button>
-      </div>
-      <div className="col-span-1 col-start-4 row-start-1 flex items-end justify-end gap-2 p-3 h-fit -mb-2 border border-b-3 border-app-border md:border-0">
-        <ThemeSwitcher />
-      </div>
-      <section className="col-span-1 col-start-1 sectionRowMed flex flex-col justify-start gap-2 bg-app-muted/5">
-        <h2 className="text-3xl font-bold text-app-text text-center w-full">Navigation Console</h2>
-        <div  className="grow flex flex-col border border-app-border gap-2 p-2 m-2 content-center bg-app-bg/75">
+<div className="min-h-screen w-full bg-app-bg flex flex-col gap-12 relative">
+  <Header />
 
-        </div>
-      </section>
-      <section className="col-span-2 col-start-2 sectionRowMed flex flex-col justify-start gap-2 bg-app-muted/5">
-        <h2 className="text-3xl font-bold text-app-text text-center w-full">Current Console</h2>
-        <div  className="grow flex flex-col border border-app-border gap-2 p-2 m-2 content-center bg-app-bg/75">
+  {/* Hero / Pitch Statement */}
+  <section className="mt-20 w-full px-6 max-w-4xl mx-auto flex flex-col items-center gap-4 text-center">
+    <h1 className="text-3xl md:text-5xl font-bold text-app-text leading-tight">
+      AAA studios are monopolizing the industry and suffocating the soul of <strong className="text-app-accent">creation</strong>.
+    </h1>
+    <p className="text-xl md:text-4xl text-app-muted max-w-2xl">
+      They ignore the community while raking in millions. It’s time to reclaim the art form.
+    </p>
+    <p className="text-lg md:text-3xl font-medium text-app-accent">
+      Alone we’re good. Together we’re unstoppable.
+    </p>
+  </section>
 
-        </div>
-      </section>
-      <section className="col-span-1 col-start-4 row-start-2 sectionRowMed flex flex-col justify-start gap-2 bg-app-muted/5">
-        <h2 className="text-3xl font-bold text-app-text text-center w-full">Spotlight Console</h2>
-        <div  className="grow flex flex-col border border-app-border gap-2 p-2 m-2 content-center bg-app-bg/75">
-
-        </div>
-      </section>
+  {/* Mission & CTA Grid */}
+  <main className="grow px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center pb-16">
+    {/* Left Column: Mission */}
+    <div className="flex flex-col gap-6 text-left">
+      <h2 className="text-3xl font-semibold text-app-text">
+        Connect, collaborate, and build <strong className="text-app-accent">real projects</strong>.
+      </h2>
+      <p className="text-base md:text-lg text-app-muted leading-relaxed">
+        Showcase your work, exchange actionable feedback, and team up with other creators to bring ambitious ideas to life.
+      </p>
+      <p className="text-base md:text-lg text-app-muted leading-relaxed">
+        <strong className="text-app-text">UnderGroundIndie</strong> exists to unite indie developers and creators—leveling the playing field against a stale, corporate market.
+      </p>
     </div>
+
+    {/* Right Column: CTA Box */}
+    <div className="flex flex-col items-center justify-center p-8 border border-app-accent/20 rounded-xl bg-app-card/50 text-center gap-6">
+      <h3 className="text-2xl font-bold text-app-text">
+        Join the <span className="text-app-accent">Indie Revolution</span>
+      </h3>
+      <p className="text-app-muted max-w-xs">
+        Find your next teammate or launch your project today.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-3 w-full justify-center max-w-xs">
+        <button className="bg-app-accent text-app-bg hover:bg-app-accent-hover font-semibold px-5 py-2.5 rounded-md transition-colors w-full">
+          Create Account
+        </button>
+        <button className="text-app-text border border-app-accent/40 hover:border-app-accent hover:bg-app-accent/10 px-5 py-2.5 rounded-md transition-colors w-full">
+          Sign In
+        </button>
+      </div>
+    </div>
+  </main>
+</div>
   );
 }
