@@ -72,3 +72,7 @@
 .sectionRowMed{
     @apply md:row-start-2 md:row-span-8 md:border border-app-border min-h-full -mt-10; 
 }
+
+.formInput{
+  @apply text-center border border-app-border bg-app-muted text-2xl h-fit;
+}

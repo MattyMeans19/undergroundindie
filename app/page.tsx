@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -6,7 +7,7 @@ export default function Home() {
   <Header />
 
   {/* Hero / Pitch Statement */}
-  <section className="mt-20 w-full px-6 max-w-4xl mx-auto flex flex-col items-center gap-4 text-center">
+  <section className="w-full px-6 max-w-4xl mx-auto flex flex-col items-center gap-4 text-center">
     <h1 className="text-3xl md:text-5xl font-bold text-app-text leading-tight">
       AAA studios are monopolizing the industry and suffocating the soul of <strong className="text-app-accent">creation</strong>.
     </h1>
@@ -42,12 +43,12 @@ export default function Home() {
         Find your next teammate or launch your project today.
       </p>
       <div className="flex flex-col sm:flex-row gap-3 w-full justify-center max-w-xs">
-        <button className="bg-app-accent text-app-bg hover:bg-app-accent-hover font-semibold px-5 py-2.5 rounded-md transition-colors w-full">
+        <Link href="/signup" className="bg-app-accent text-app-bg hover:bg-app-accent-hover font-semibold px-5 py-2.5 rounded-md transition-colors w-full">
           Create Account
-        </button>
-        <button className="text-app-text border border-app-accent/40 hover:border-app-accent hover:bg-app-accent/10 px-5 py-2.5 rounded-md transition-colors w-full">
+        </Link>
+        <Link href="/signin" className="text-app-text border border-app-accent/40 hover:border-app-accent hover:bg-app-accent/10 px-5 py-2.5 rounded-md transition-colors w-full">
           Sign In
-        </button>
+        </Link>
       </div>
     </div>
   </main>
