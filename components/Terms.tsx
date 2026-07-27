@@ -1,15 +1,15 @@
 export default function TermsOfService() {
 
   return (
-    <div className="max-w-3xl mx-auto my-8 bg-white text-gray-800 rounded-xl shadow-lg border border-gray-200 overflow-hidden font-sans">
+    <div className="w-full h-full self-center mx-auto bg-white text-gray-800 rounded-xl shadow-lg border border-gray-200 font-sans">
       {/* Header */}
       <div className="bg-gray-900 text-white px-8 py-6">
-        <h1 className="text-2xl font-bold tracking-tight">Terms of Service & User Agreement</h1>
-        <p className="text-xs text-gray-400 mt-1">Last Updated: July 2026</p>
+        <h1 className="text-3xl font-bold tracking-tight">Terms of Service & User Agreement</h1>
+        <p className="text-sm text-gray-400 mt-1">Last Updated: July 2026</p>
       </div>
 
       {/* Terms Content Body */}
-      <div className="p-8 space-y-8 max-h-[60vh] overflow-y-auto leading-relaxed text-sm">
+      <div className="p-8 space-y-8 max-h-[90vh] overflow-y-auto leading-relaxed text-md">
         
         <p className="text-gray-600">
           Welcome! By accessing or using our platform, you agree to be bound by the following Terms of Service. Please read them carefully before creating an account or using our services.
@@ -17,7 +17,7 @@ export default function TermsOfService() {
 
         {/* Section 1: User Terms */}
         <section className="space-y-4">
-          <h2 className="text-lg font-bold text-gray-900 border-b border-gray-200 pb-2">
+          <h2 className="text-xl font-bold text-gray-900 border-b border-gray-200 pb-2">
             1. User Terms
           </h2>
 
@@ -54,7 +54,7 @@ export default function TermsOfService() {
 
         {/* Section 2: Platform Terms */}
         <section className="space-y-4">
-          <h2 className="text-lg font-bold text-gray-900 border-b border-gray-200 pb-2">
+          <h2 className="text-xl font-bold text-gray-900 border-b border-gray-200 pb-2">
             2. Platform Terms & Disclaimers
           </h2>
 

@@ -7,7 +7,7 @@ export default function Home() {
   <Header />
 
   {/* Hero / Pitch Statement */}
-  <section className="w-full px-6 max-w-4xl mx-auto flex flex-col items-center gap-4 text-center">
+  <section className="mt-[20vh] w-full px-6 max-w-4xl mx-auto flex flex-col items-center gap-4 text-center">
     <h1 className="text-3xl md:text-5xl font-bold text-app-text leading-tight">
       AAA studios are monopolizing the industry and suffocating the soul of <strong className="text-app-accent">creation</strong>.
     </h1>

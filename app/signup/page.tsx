@@ -4,7 +4,8 @@ import Header from "@/components/Header"
 import Link from "next/link"
 import { useState } from "react";
 import { Country, State, City }  from 'country-state-city';
-import { ICountry, IState, ICity } from 'country-state-city'
+import { IState} from 'country-state-city'
+import TermsOfService from "@/components/Terms";
 
 export default function SignUp(){
     const Countries = Country.getAllCountries();
@@ -19,6 +20,8 @@ export default function SignUp(){
         country: "",
         state: ""
     })
+    const [showTerms, toggleTerms] = useState(false)
+    const [termsViewed, setTermsViewed] = useState(false)
 
     function updateStatesList(countryCode: string){
         if(countryCode != ""){
@@ -48,11 +51,33 @@ export default function SignUp(){
             setUserData({...userData, age: verifiedAge})
         }
     }
+    function viewTerms(){
+        if(showTerms === false){
+            toggleTerms(true);
+        } else{
+            toggleTerms(false);
+        }
+
+        if(termsViewed === false){
+            setTermsViewed(true);
+        }
+    }
+
+    function createAccount(){
+        const { age, ...stringFields } = userData;
+        const isValid = age > 16 && Object.values(stringFields).every(val => val.trim() !== "");
+        if(isValid && termsViewed){
+            alert("Account created!")
+        } else{
+            alert("Please make sure all fields are valid and you have viewed the Terms of Service & User Agreement!")
+        }
+    }
 
     return(
-        <div className="bg-app-bg min-h-screen flex flex-col">
+        <div className="bg-app-bg min-h-screen flex flex-col relative">
             <Header />
-            <form className="grow bg-app-accent/5 m-3 md:m-20 lg:m-50 flex flex-col lg:grid grid-cols-2 gap-10 lg:p-25 rounded-xl">
+            <form className="grow bg-app-accent/5 m-3 md:m-20 lg:m-50 flex flex-col lg:grid grid-cols-2 gap-10 lg:p-25 rounded-xl"
+                onSubmit={() => createAccount()}>
                 <input type="text" name="fName" className="formInput" required placeholder="First Name" onChange={(e) => setUserData({...userData, fName: e.target.value})}></input>
                 <input type="text" name="lName" className="formInput" required placeholder="Last Name" onChange={(e) => setUserData({...userData, lName: e.target.value})}></input>
                 <input type="email" name="email" className="formInput" required placeholder="Email Address" onChange={(e) => setUserData({...userData, email: e.target.value})}></input>
@@ -71,19 +96,28 @@ export default function SignUp(){
                         <option key={index} value={country.isoCode}>{country.name}</option>
                     ))}
                 </select>
-                <select name="state" className="formInput">
+                <select name="state" className="formInput"
+                    onChange={(e => setUserData({...userData, state:e.target.value}))}>
                     <option value="">State/Province</option>
                     {statesList.map((state, index) => (
                         <option key={index} value={state.name}>{state.name}</option>
                     ))}
                 </select>
-                <div className="col-span-full flex flex-nowrap justify-center gap-10 p-10">
-                    <label htmlFor="userAgreement" className="text-app-text text-center">By checking this box I agree that all information provided is valid per the <strong className="text-blue-400">Terms of Service & User Agreement</strong></label>
-                    <input type="checkbox" name="userAgreement" required></input>
+                <div className="col-span-full flex flex-nowrap justify-center items-center gap-10 p-10">
+                    <label htmlFor="userAgreement" className="text-app-text text-center">
+                        By checking this box I agree that all information provided is valid per the <button type="button" className="text-blue-400 cursor-pointer" onClick={() => viewTerms()}> Terms of Service & User Agreement</button>
+                    </label>
+                    <input type="checkbox" name="userAgreement" className="place-self-center size-5" required></input>
                 </div>
                 <Link href="/" className="text-2xl px-10 w-fit place-self-center py-2 border-3 border-app-accent/30 hover:bg-app-accent-hover/5 rounded-xl text-app-text content-center text-center">Cancel</Link>
                 <button type="submit" className="text-2xl px-10 w-fit place-self-center py-2 border-3 border-app-border rounded-xl bg-app-accent hover:bg-app-accent-hover cursor-pointer">Continue</button>
             </form>
+            {showTerms && 
+                <div className="fixed h-full">
+                    <button className="fixed right-2 md:right-5 top-2 md:top-5 border p-1 md:text-4xl text-red-500 cursor-pointer" onClick={() => viewTerms()}>X</button>
+                    <TermsOfService />
+                </div>
+            }
         </div>
     )
 }
