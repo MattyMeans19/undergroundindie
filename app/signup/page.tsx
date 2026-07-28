@@ -2,10 +2,11 @@
 
 import Header from "@/components/Header"
 import Link from "next/link"
-import { useState } from "react";
+import { SubmitEvent, useState } from "react";
 import { Country, State, City }  from 'country-state-city';
 import { IState} from 'country-state-city'
 import TermsOfService from "@/components/Terms";
+import { redirect } from "next/navigation";
 
 export default function SignUp(){
     const Countries = Country.getAllCountries();
@@ -63,11 +64,16 @@ export default function SignUp(){
         }
     }
 
-    function createAccount(){
+    function createAccount(event: SubmitEvent){
+        event.preventDefault();
         const { age, ...stringFields } = userData;
         const isValid = age > 16 && Object.values(stringFields).every(val => val.trim() !== "");
         if(isValid && termsViewed){
-            alert("Account created!")
+            const params = new URLSearchParams({
+                ...userData, 
+                age: userData.age.toString(),
+            });
+            redirect(`/account/setup?${params.toString()}`)
         } else{
             alert("Please make sure all fields are valid and you have viewed the Terms of Service & User Agreement!")
         }
@@ -77,7 +83,7 @@ export default function SignUp(){
         <div className="bg-app-bg min-h-screen flex flex-col relative">
             <Header />
             <form className="grow bg-app-accent/5 m-3 md:m-20 lg:m-50 flex flex-col lg:grid grid-cols-2 gap-10 lg:p-25 rounded-xl"
-                onSubmit={() => createAccount()}>
+                onSubmit={(e) => createAccount(e)}>
                 <input type="text" name="fName" className="formInput" required placeholder="First Name" onChange={(e) => setUserData({...userData, fName: e.target.value})}></input>
                 <input type="text" name="lName" className="formInput" required placeholder="Last Name" onChange={(e) => setUserData({...userData, lName: e.target.value})}></input>
                 <input type="email" name="email" className="formInput" required placeholder="Email Address" onChange={(e) => setUserData({...userData, email: e.target.value})}></input>
