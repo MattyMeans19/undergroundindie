@@ -42,12 +42,15 @@ export default function Setup(){
                 <div className="row-start-5 col-span-full flex md:flex-nowrap justify-between">
                     <label htmlFor="skill" className="text-app-secondary text-bold text-2xl text-bold">Add a Skill</label>
                     <input name="skill" type="text" className="bg-app-muted text-2xl p-2"></input>
-                    <button>+</button>
-                    {accountInfo.skills.map((skill, index) =>(
-                        <p key={index}>
-                            {skill}
-                        </p>
-                    ))}    
+                    <button className="text-3xl bg-app-accent/50 px-3 rounded-lg">+</button>
+                    <div className="basis-1/4 flex">
+                        {accountInfo.skills.map((skill, index) =>(
+                            <p key={index}>
+                                {skill}
+                            </p>
+                        ))}     
+                    </div>
+                       
                 </div>
                 
             </div>
