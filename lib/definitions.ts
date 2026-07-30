@@ -9,6 +9,7 @@ export type UserData = {
 
 export interface AccountInfo extends UserData{
     userName: string,
+    userId: string,
     profilePic: string,
     password: string,
     bio: string,

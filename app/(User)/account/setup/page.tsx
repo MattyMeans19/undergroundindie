@@ -21,7 +21,8 @@ export default function Setup(){
         goals: [],
         profilePic: "",
         projects: [],
-        studios: []
+        studios: [],
+        userId: ""
     })
     const [typedSkill, setSkill] = useState("");
     const [typedGoal, setGoal] = useState("");
