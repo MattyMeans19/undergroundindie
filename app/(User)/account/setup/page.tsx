@@ -70,8 +70,9 @@ export default function Setup(){
                 <input name="password" type="password" minLength={8} className="bg-app-muted text-2xl p-2"></input>
                 <label htmlFor="primaryRole" className="text-app-secondary text-bold text-2xl text-bold row-start-2">Primary Role: </label>
                 <input name="primaryRole" type="text" minLength={8} className="bg-app-muted text-2xl p-2 row-start-2 col-span-2"></input>
+                <p className="text-sm text-app-secondary row-start 2 col-start-4 col-span-2 content-center">(This won't limit your options, it's just to help sorting and filtering!)</p>
                 <label htmlFor="bio" className="text-app-secondary text-bold text-2xl text-bold row-start-3">Bio: {accountInfo.bio.length} / 300</label>
-                <textarea name="bio" maxLength={300} className="bg-app-muted row-span-2 row-start-3 col-span-4 text-2xl p-2 overflow-y-scroll"
+                <textarea name="bio" maxLength={300} className="bg-app-muted row-span-2 row-start-3 col-span-4 text-2xl p-2 overflow-y-scroll md:overflow-y-auto"
                     onChange={(e) => updateAccountInfo({...accountInfo, bio: e.target.value})}>
                 </textarea>
                 <div className="row-start-5 row-span-4 col-span-2 flex flex-col justify-center gap-2">
@@ -112,6 +113,7 @@ export default function Setup(){
                             </p>
                         ))}     
                     </div>
+                    <span className="text-lg text-app-muted text-end">{accountInfo.goals.length} / 5</span>
                 </div>
                 <button className="row-start-9 col-start-2 col-span-3 cursor-pointer text-2xl font-bold md:text-4xl p-2 bg-app-accent/50 hover:bg-app-accent active:bg-app-secondary rounded-xl">Join the Revolution!</button>
             </div>
