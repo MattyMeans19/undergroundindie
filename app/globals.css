@@ -69,10 +69,31 @@
   }
 }
 
+.inner-scrollbar {
+  scrollbar-width: 8px;
+  scrollbar-color: var(--accent) transparent;
+}
+
 .sectionRowMed{
     @apply md:row-start-2 md:row-span-8 md:border border-app-border min-h-full -mt-10; 
 }
 
 .formInput{
   @apply text-center border border-app-border bg-app-muted text-2xl h-fit;
+}
+
+.navButton{
+  @apply bg-app-muted/25 px-3 py-1 rounded-md text-app-secondary shadow-sm shadow-app-accent;
+}
+.contentWindow{
+  @apply grow rounded-xl bg-app-muted/25 inset-ring-4 inset-ring-app-accent/30 inset-shadow-sm inset-shadow-black flex flex-col gap-5 p-5;
+}
+.optionsWindow{
+  @apply min-h-full basis-1/6 flex flex-nowrap justify-center gap-10 bg-app-muted/25 rounded-xl inset-ring-4 inset-ring-app-secondary/30 inset-shadow-sm inset-shadow-black p-5;
+}
+.optionButton{
+  @apply text-2xl text-app-text hover:text-app-accent
+}
+.displayWindow{
+  @apply grow basis-5/6 bg-app-muted/25 rounded-xl inset-ring-4 inset-ring-app-secondary/30 inset-shadow-sm inset-shadow-black p-5;
 }
