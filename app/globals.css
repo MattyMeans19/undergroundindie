@@ -92,8 +92,11 @@
   @apply min-h-full basis-1/6 flex flex-nowrap justify-center gap-10 bg-app-muted/25 rounded-xl inset-ring-4 inset-ring-app-secondary/30 inset-shadow-sm inset-shadow-black p-5;
 }
 .optionButton{
-  @apply text-2xl text-app-text hover:text-app-accent
+  @apply md:text-2xl text-app-text hover:text-app-accent
 }
 .displayWindow{
-  @apply grow basis-5/6 bg-app-muted/25 rounded-xl inset-ring-4 inset-ring-app-secondary/30 inset-shadow-sm inset-shadow-black p-5;
+  @apply grow basis-5/6 bg-app-muted/25 rounded-sm p-10;
+}
+.contentCard{
+  @apply flex flex-col gap-5 bg-app-card h-fit rounded-2xl p-5 border-app-secondary/20 border-2;
 }

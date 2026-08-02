@@ -73,7 +73,7 @@ export default function SignUp(){
                 ...userData, 
                 age: userData.age.toString(),
             });
-            redirect(`/account/setup?${params.toString()}`)
+            redirect(`/setup?${params.toString()}`)
         } else{
             alert("Please make sure all fields are valid and you have viewed the Terms of Service & User Agreement!")
         }
