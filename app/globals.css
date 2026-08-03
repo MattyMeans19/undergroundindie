@@ -89,10 +89,10 @@
   @apply grow rounded-xl bg-app-muted/25 inset-ring-4 inset-ring-app-accent/30 inset-shadow-sm inset-shadow-black flex flex-col gap-5 p-5;
 }
 .optionsWindow{
-  @apply min-h-full basis-1/6 flex flex-nowrap justify-center gap-10 bg-app-muted/25 rounded-xl inset-ring-4 inset-ring-app-secondary/30 inset-shadow-sm inset-shadow-black p-5;
+  @apply min-h-full basis-1/6 flex flex-nowrap justify-center gap-3 md:gap-10 bg-app-muted/25 rounded-xl inset-ring-4 inset-ring-app-secondary/30 inset-shadow-sm inset-shadow-black p-5;
 }
 .optionButton{
-  @apply md:text-2xl text-app-text hover:text-app-accent
+  @apply text-sm md:text-2xl text-app-text hover:text-app-accent
 }
 .displayWindow{
   @apply grow basis-5/6 bg-app-muted/25 rounded-sm p-10;

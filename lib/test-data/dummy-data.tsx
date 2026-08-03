@@ -20,7 +20,11 @@ export const feedPosts= [
         "timestamp": "2026-08-02T15:10:05Z"
       }
     ],
-    "media": []
+    "media": [{
+      "mediaId": "media-201",
+      "type": "video",
+      "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    }]
   },
   {
     "postId": "post-102",
@@ -36,15 +40,23 @@ export const feedPosts= [
         "timestamp": "2026-08-01T09:40:00Z"
       }
     ],
-    "media": []
+    "media": [{
+      "mediaId": "media-202",
+      "type": "image",
+      "url": ""
+    }]
   },
   {
     "postId": "post-103",
     "authorId": "user-5541",
-    "content": "Anyone have recommendations for light setup gear or custom desktop builds? Planning a station refresh soon.",
+    "content": "Made some progress on the audio processing module. Still need to optimize the filters, but it's getting there.",
     "timestamp": "2026-07-31T18:20:00Z",
     "likes": 7,
     "comments": [],
-    "media": []
+    "media": [{
+      "mediaId": "media-203",
+      "type": "audio",
+      "url": ""
+    }]
   }
 ]
