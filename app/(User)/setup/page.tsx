@@ -85,7 +85,7 @@ export default function Setup(){
                         }}>    
                     </input>
                 <label htmlFor="password" className="text-app-secondary text-bold text-2xl text-bold lg:text-end">Password: </label>
-                <input name="password" type="password" minLength={8} className="bg-app-muted text-2xl p-2"></input>
+                <input name="password" type="password" minLength={8} className="bg-app-muted text-2xl p-2" onChange={(e) => updateAccountInfo({...accountInfo, password: e.target.value})}></input>
                 <label htmlFor="primaryRole" className="text-app-secondary text-bold text-2xl text-bold row-start-2">Primary Role: </label>
                 <input name="primaryRole" type="text" autoComplete="off" minLength={8} className="bg-app-muted text-2xl p-2 row-start-2 col-span-2"onChange={(e) => updateAccountInfo({...accountInfo, primaryRole: e.target.value})}></input>
                 <p className="text-sm text-app-secondary row-start 2 col-start-4 col-span-2 content-center">(This won't limit your options, it's just to help sorting and filtering!)</p>
