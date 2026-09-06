@@ -46,7 +46,7 @@ export default function PrelaunchPage() {
         </p>
 
         <p className="text-2xl text-app-secondary">Premium</p>
-        <p className="text-2xl text-app-secondary">$5.99</p>
+        <p className="text-2xl text-app-secondary">$9.99 USD</p>
         <p className="text-sm md:text-2xl text-app-secondary">No Ads, Gallery style profile, <strong>10</strong> collaboration/Studio applications per month, 
           <strong> 1</strong> Studio/Team creation, <strong>5</strong> open collaborations.
         </p>
@@ -63,7 +63,7 @@ export default function PrelaunchPage() {
         </p>
 
         <p className="text-2xl text-app-secondary">Pro</p>
-        <p className="text-2xl text-app-secondary">$4.99</p>
+        <p className="text-2xl text-app-secondary">$4.99 USD</p>
         <p className="text-sm md:text-2xl text-app-secondary">Everything in the free tier, plus a recommendations page for devs that match open positions in your Studio/Team
           <strong className="italic"> AND</strong> access to greater funding via community voting. <br />
           <span className="text-lg text-app-muted">*Note: Requires Studio/Team Founder to have a premium user account.</span>
