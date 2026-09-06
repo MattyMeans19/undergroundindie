@@ -1,22 +1,33 @@
 'use client'
+import { addPrelaunchUser } from "@/app/devactions";
+import { prelaunchUser } from "@/lib/definitions";
 import React, {FormEvent} from "react";
 import { useState } from "react";
 
 export default  function PrelaunchForm() {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<prelaunchUser>({
         fname: "",
         lname: "",
         email: "",
         primaryRole: "",
-        tier: ""
+        tier: "",
+        timestamp: new Date().toISOString()
     });
     const [submitted, setSubmitted] = useState(false);
 
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setSubmitted(true);
+        if(formData.tier != ""){}
+        sendFormData();
     };
+
+    async function sendFormData() {
+        const formSubmission = await addPrelaunchUser(formData as prelaunchUser);
+        if(formSubmission.success === "true") {
+            setSubmitted(true);
+        }
+    }
 
     return(
         <div className="min-w-4xl self-center">

@@ -95,3 +95,12 @@ export type Message = {
     timestamp: string,
     read: boolean
 }
+
+export type prelaunchUser = {
+    email: string,
+    fname: string,
+    lname: string,
+    primaryRole: string,
+    tier: string,
+    timestamp: string
+}

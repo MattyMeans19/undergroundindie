@@ -1,7 +1,16 @@
+'use client'
 import Header from "@/components/Header";
 import Link from "next/link";
+import { useEffect } from "react";
+import {redirect} from "next/navigation";
 
 export default function Home() {
+  useEffect(() => {
+    if (process.env.NODE_ENV === "development") {
+      redirect('/prelaunch');
+    }
+  }, []);
+
   return (
 <div className="min-h-screen w-full bg-app-bg flex flex-col gap-12 relative">
   <Header />
