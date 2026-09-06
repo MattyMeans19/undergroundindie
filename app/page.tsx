@@ -6,7 +6,7 @@ import {redirect} from "next/navigation";
 
 export default function Home() {
   useEffect(() => {
-    if (process.env.prelaunch=== "true") {
+    if (process.env.NEXT_PUBLIC_PRELAUNCH === "true") {
       redirect('/prelaunch');
     }
   }, []);
