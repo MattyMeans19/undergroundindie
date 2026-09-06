@@ -3,9 +3,9 @@ import Header from "@/components/Header";
 import { AccountInfo } from "@/lib/definitions";
 import { updateAccount } from "@/lib/test-data/user-data";
 import { redirect, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
-export default function Setup(){
+    function SetupForm(){
     const userData = useSearchParams()
     const [accountInfo, updateAccountInfo] = useState<AccountInfo>({
         fName: userData.get('fName') || "",
@@ -140,4 +140,12 @@ export default function Setup(){
             </div>
         </div>
     )
+}
+
+export default function Setup() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-app-bg flex items-center justify-center text-app-text text-2xl">Loading...</div>}>
+            <SetupForm />
+        </Suspense>
+    );
 }
