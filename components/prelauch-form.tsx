@@ -30,7 +30,7 @@ export default  function PrelaunchForm() {
     }
 
     return(
-        <div className="min-w-4xl self-center">
+        <div className="md:min-w-4xl self-center">
             {submitted ? (
                 <div className="flex flex-col items-center text-center p-5 min-h-fit bg-app-bg self-center w-full border-5 rounded-xl border-app-border">
                     <h2 className="text-4xl text-app-accent mb-4">Thank you, {formData.fname}, for your interest in our platform! Keep an eye on your email for updates.</h2>
