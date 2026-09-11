@@ -120,7 +120,7 @@ export default function SignUp(){
             </form>
             {showTerms && 
                 <div className="fixed h-full">
-                    <button className="fixed right-2 md:right-5 top-2 md:top-5 border p-1 md:text-4xl text-red-500 cursor-pointer" onClick={() => viewTerms()}>X</button>
+                    <button className="fixed right-2 md:right-5 top-2 md:top-17 border px-1 md:text-4xl bg-red-500 cursor-pointer" onClick={() => viewTerms()}>X</button>
                     <TermsOfService />
                 </div>
             }
