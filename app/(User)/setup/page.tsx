@@ -1,7 +1,6 @@
 'use client'
 import Header from "@/components/Header";
 import { AccountInfo } from "@/lib/definitions";
-import { updateAccount } from "@/lib/test-data/user-data";
 import { redirect, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import { Country, State, IState }  from 'country-state-city';
@@ -70,7 +69,6 @@ function SetupForm(){
     }
 
     function Join(data: AccountInfo){
-        updateAccount(data);
         redirect("/dashboard")
     }
 

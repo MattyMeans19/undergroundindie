@@ -4,16 +4,19 @@ import Header from "@/components/Header"
 import NavBar from "@/components/NavBar"
 import Image from "next/image"
 import { AccountInfo } from "@/lib/definitions"
-import { getAccountInfo } from "@/lib/test-data/user-data"
 import MRJupiter from "@/lib/test-data/Mr_Jupiter.png"
 import { useEffect, useState } from "react"
 
 export default function Profile(){
-        const [accountInfo, setAccountInfo] = useState<AccountInfo>(getAccountInfo)
-    
-        useEffect(() => {
-            setAccountInfo(getAccountInfo());
-        }, []);
+    const [accountInfo, setAccountInfo] = useState({
+        fName: "",
+        lName: "",
+        userName: "",
+        primaryRole: "",
+        age: 0,
+        bio: ""
+    })
+
     return(
         <div className="bg-app-bg flex flex-col gap-5 min-h-screen min-w-screen lg:p-3">
             <Header />

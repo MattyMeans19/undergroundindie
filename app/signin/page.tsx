@@ -1,6 +1,5 @@
 'use client'
 import Header from "@/components/Header";
-import { getAccountInfo } from "@/lib/test-data/user-data";
 import { AccountInfo } from "@/lib/definitions"
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -12,19 +11,6 @@ export default function SignIn(){
         password: ""
     })
 
-    const [accountInfo, setAccountInfo] = useState<AccountInfo>(getAccountInfo)
-
-    useEffect(() => {
-        setAccountInfo(getAccountInfo());
-    }, []);
-    
-    function handleLogin(){
-        if (login.username === accountInfo.userName && login.password === accountInfo.password){
-            redirect("/dashboard")
-        } else{
-            alert("Incorrect username or password. Please try again.")
-        }
-    }
     return(
         <div className="min-h-screen bg-app-bg flex flex-col gap-20">
             <Header />
@@ -36,8 +22,7 @@ export default function SignIn(){
                     <input type="text" name="user-name" autoComplete="yes" className="formInput md:col-span-2 lg:col-span-1" onChange={(e) => setLogin({...login, username: e.target.value})}></input>
                     <label htmlFor="password" className="text-2xl text-app-secondary text-end row-start-2">Password: </label>
                     <input type="password" name="password" autoComplete="yes" className="formInput col-start-2 row-start-2 md:col-span-2 lg:col-span-1" onChange={(e) => setLogin({...login, password: e.target.value})}></input>
-                    <button className="rounded-2xl bg-app-accent hover:bg-app-primary w-60 place-self-center py-2 text-2xl row-start-3 col-start-2"
-                    onClick={() => handleLogin()}>
+                    <button className="rounded-2xl bg-app-accent hover:bg-app-primary w-60 place-self-center py-2 text-2xl row-start-3 col-start-2">
                         Sign In
                     </button>
                 </div>                
