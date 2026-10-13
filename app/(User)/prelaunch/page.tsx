@@ -16,7 +16,7 @@ export default function PrelaunchPage() {
         post open positions for collaborations to fill your team, or outsource work.
       </p>
 
-      <div className="border-5 rounded-xl border-app-border mt-25 p-5 w-full max-w-2xl bg-app-muted/30">
+      <div className="border-5 bg-app-card rounded-xl border-app-border mt-25 p-5 w-full max-w-2xl bg-app-muted/30">
         <p className="text-4xl text-app-accent">Current Goal to achieve community funded grants:  <br/> 
           <strong className="italic">95,000</strong> free users <br /> 
           <strong className="italic">5000</strong> premium users <br />
@@ -24,16 +24,16 @@ export default function PrelaunchPage() {
         <p className="text-2xl text-app-secondary mt-10">
           We aim for full transparency with our community, and will provide regular updates on our progress towards this goal. Once we reach this goal, we will begin offering grants to developers in the community to help fund their projects.
         </p>
-        <p className="text-lg text-app-muted">
+        <p className="text-lg text-app-accent">
           We understand that in a perfect world this would all be free, and we are committed to making the platform as accessible as possible for all developers.
           Our goal revenue structure would be 80% of all revenue generated from the platform would go back into the community to fund grants, and 20% would go towards maintaining and improving the platform.
         </p>
       </div>
-      <p className="text-4xl mt-10  text-app-accent">Current planned tiers</p>
-      <p className="text-lg text-app-muted">*Note: Prices and benefits are subject to change based on community feedback and platform development.</p>
-      <p className="text-lg text-app-muted">*'Open Collaborations' means open positions for collaborations to fill your team, or outsource work on solo projects.</p>
+      <p className="text-4xl mt-10 text-app-accent">Current planned tiers</p>
+      <p className="text-lg text-app-secondary">*Note: Prices and benefits are subject to change based on community feedback and platform development.</p>
+      <p className="text-lg text-app-secondary">*'Open Collaborations' means open positions for collaborations to fill your team, or outsource work on solo projects.</p>
 
-      <div className="border-5 rounded-xl border-app-border p-5 w-full md:max-w-7xl bg-app-muted/30 grid grid-cols-3 gap-4">
+      <div className="border-5 rounded-xl border-app-border p-5 w-full md:max-w-7xl bg-app-card grid grid-cols-3 gap-4">
       <span className="text-2xl md:text-4xl text-app-secondary underline col-span-full mb-10">User Tiers</span>
         <p className="text-2xl md:text-4xl text-app-accent underline">Tier</p>
         <p className="text-2xl md:text-4xl text-app-accent underline">Price</p>
@@ -70,12 +70,12 @@ export default function PrelaunchPage() {
         </p>
       </div>
 
-      <p className="text-3xl text-app-muted my-10 max-w-7xl">
+      <p className="text-3xl text-app-accent my-10 max-w-7xl">
         This platform is focused mainly on Indie Game Developement, however we encourage artists, designers, musicians, voice actors, and other creative professionals to join our community.
         Projects will NOT be limited to just game development, but we will have a strong focus on it. We want to create a community where all creative professionals can come together and collaborate on projects, regardless of their skill level or experience.
       </p>
 
-      <div className="border-5 rounded-xl border-app-border p-5 w-full max-w-7xl bg-app-muted/30 flex flex-col gap-4 mb-5">
+      <div className="border-5 rounded-xl border-app-border p-5 w-full max-w-7xl bg-app-card flex flex-col gap-4 mb-5">
         <span className="text-4xl text-app-secondary underline col-span-full mb-10">Interested in Joining?</span>
         <PrelaunchForm />
       </div>

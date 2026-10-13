@@ -32,14 +32,14 @@ export default  function PrelaunchForm() {
     return(
         <div className="md:min-w-4xl self-center">
             {submitted ? (
-                <div className="flex flex-col items-center text-center p-5 min-h-fit bg-app-bg self-center w-full border-5 rounded-xl border-app-border">
+                <div className="flex flex-col items-center text-center p-5 min-h-fit bg-app-card self-center w-full border-5 rounded-xl border-app-border">
                     <h2 className="text-4xl text-app-accent mb-4">Thank you, {formData.fname}, for your interest in our platform! Keep an eye on your email for updates.</h2>
                 </div>
             ) : (
-                <form className="flex flex-col items-center text-center p-5 min-h-fit bg-app-bg self-center w-full border-5 rounded-xl border-app-border"
+                <form className="flex flex-col items-center text-center p-5 min-h-fit bg-app-card self-center w-full border-5 rounded-xl border-app-border"
                     onSubmit={handleSubmit}
                 >
-                    <p className="text-2xl text-app-muted mb-5">
+                    <p className="text-2xl text-app-primary mb-5">
                     Fill out this form to stay up to date on our progress and provide feedback.
                     </p>
                     <div className="mb-4 flex w-full justify-between items-center">

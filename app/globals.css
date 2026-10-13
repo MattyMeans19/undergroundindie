@@ -4,69 +4,97 @@
   --color-app-bg: var(--bg);
   --color-app-card: var(--card);
   --color-app-border: var(--border);
+  --color-app-primary: var(--primary);
+  --color-app-secondary: var(--secondary);
   --color-app-accent: var(--accent);
   --color-app-accent-hover: var(--accent-hover);
-  --color-app-secondary: var(--secondary);
-  --color-app-text: var(--text-main);
-  --color-app-muted: var(--text-muted);
+  --font-glitch: 'Glitch', sans-serif;
+  --font-tech: 'Tech', sans-serif;
+  --font-sketch: 'Sketch', sans-serif;
 }
 
 @layer base {
-  /* ==========================================
-     THEME 1: Cyber-Industrial (Terminal Amber)
-     ========================================== */
   :root, [data-theme="terminal-amber"] {
-    --bg: #0F0E0E;
-    --card: #181616;
-    --border: #2E2A28;
-    --accent: #FFB000;
-    --accent-hover: #E09B00;
-    --secondary: #FF6B00;
-    --text-main: #EDE8E1;
-    --text-muted: #8C827A;
+    --bg: #181210;
+    --card: #271e1a;
+    --border: #3d302a;
+    --primary: #994400;    /* Dark primary */
+    --secondary: #FF6B00;  /* Medium secondary */
+    --accent: #FFD266;     /* Light accent */
+    --accent-hover: #FFE599;
   }
 
-  /* ==========================================
-     THEME 2: Digital Underground (Acid Violet)
-     ========================================== */
   [data-theme="acid-violet"] {
-    --bg: #0B0813;
-    --card: #130F20;
-    --border: #271F3B;
-    --accent: #CCFF00;
-    --accent-hover: #B5E000;
-    --secondary: #00F0FF;
-    --text-main: #F3EFFB;
-    --text-muted: #7A718F;
+    --bg: #14101d;
+    --card: #221b30;
+    --border: #352a4a;
+    --primary: #651ea6;    /* Brightened purple primary for high contrast */
+    --secondary: #7b1ea6;  /* Medium secondary */
+    --accent: #E5FF66;     /* Light accent */
+    --accent-hover: #EFFF99;
   }
 
-  /* ==========================================
-     THEME 3: Zine / Newspaper Brutalism
-     ========================================== */
+  [data-theme="warm-espresso"] {
+    --bg: #181210;
+    --card: #271e1a;
+    --border: #3d302a;
+    --primary: #9a3412;    /* Terracotta / Rust */
+    --secondary: #ea580c;  /* Burnt orange */
+    --accent: #fb7185;     /* Soft coral pink */
+    --accent-hover: #fda4af;
+  }
+
   [data-theme="zine-brutalism"] {
-    --bg: #121212;
-    --card: #1A1A1A;
-    --border: #333333;
-    --accent: #F5F5F5;
-    --accent-hover: #FFFFFF;
-    --secondary: #FF3333;
-    --text-main: #E5E5E5;
-    --text-muted: #666666;
+    --bg: #000000;
+    --card: #161616;
+    --border: #3D3D3D;
+    --primary: #801A1A;    /* Dark primary */
+    --secondary: #FF3333;  /* Medium secondary */
+    --accent: #FFFFFF;     /* Light accent */
+    --accent-hover: #E5E5E5;
   }
 
-  /* ==========================================
-     THEME 4: Analog Void (Deep Cobalt & Teal)
-     ========================================== */
-  [data-theme="analog-void"] {
-    --bg: #060A0F;
-    --card: #0C121A;
-    --border: #182535;
-    --accent: #00FFC2;
-    --accent-hover: #00D6A3;
-    --secondary: #3A86FF;
-    --text-main: #EAF2F8;
-    --text-muted: #5C7085;
+  [data-theme="deep-forest"] {
+    --bg: #0b1712;
+    --card: #13271f;
+    --border: #1e3e31;
+    --primary: #15803d;    /* Forest green */
+    --secondary: #22c55e;  /* Minty green */
+    --accent: #f59e0b;     /* Warm amber */
+    --accent-hover: #fbbf24;
   }
+
+  [data-theme="midnight-cyber"] {
+    --bg: #0d171a;
+    --card: #152429;
+    --border: #213941;
+    --primary: #0f766e;    /* Deep teal */
+    --secondary: #14b8a6;  /* Bright turquoise */
+    --accent: #ec4899;     /* Hot magenta / pink */
+    --accent-hover: #f472b6;
+  }
+}
+
+@font-face {
+  font-family: 'Glitch';
+  src: url('/fonts/FutureGlitch.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Tech';
+  src: url('/fonts/TechnaSans.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sketch';
+  src: url('/fonts/Sketch3D-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 .inner-scrollbar {
@@ -79,24 +107,24 @@
 }
 
 .formInput{
-  @apply text-center border border-app-border bg-app-muted text-2xl h-fit;
+  @apply text-center border border-app-border bg-app-bg text-2xl text-app-accent h-fit w-xl self-center p-2;
 }
 
 .navButton{
-  @apply bg-app-muted/25 px-3 py-1 rounded-md text-app-secondary shadow-sm shadow-app-accent;
+  @apply  px-3 py-1 rounded-md text-app-secondary bg-app-card shadow-sm shadow-app-accent;
 }
 .contentWindow{
-  @apply grow rounded-xl bg-app-muted/25 inset-ring-4 inset-ring-app-accent/30 inset-shadow-sm inset-shadow-black flex flex-col gap-5 p-5;
+  @apply grow rounded-xl  inset-ring-4 inset-ring-app-accent/30 inset-shadow-sm inset-shadow-black flex flex-col gap-5 p-5;
 }
 .optionsWindow{
-  @apply min-h-full basis-1/6 flex flex-nowrap justify-center gap-3 md:gap-10 bg-app-muted/25 rounded-xl inset-ring-4 inset-ring-app-secondary/30 inset-shadow-sm inset-shadow-black p-5;
+  @apply min-h-full basis-1/6 flex flex-nowrap justify-center gap-3 md:gap-10  rounded-xl inset-ring-4 inset-ring-app-secondary/30 inset-shadow-sm inset-shadow-black p-5;
 }
 .optionButton{
-  @apply text-sm md:text-2xl text-app-text hover:text-app-accent
+  @apply text-sm md:text-2xl text-app-secondary hover:text-app-accent
 }
 .displayWindow{
-  @apply grow basis-5/6 bg-app-muted/25 rounded-sm p-10;
+  @apply grow basis-5/6 rounded-sm p-10;
 }
 .contentCard{
-  @apply flex flex-col gap-5 bg-app-card h-fit rounded-2xl p-5 border-app-secondary/20 border-2;
+  @apply flex flex-col gap-5 h-fit rounded-2xl p-5 border-app-border border-2 bg-app-card text-app-primary text-center;
 }

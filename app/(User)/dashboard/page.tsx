@@ -23,9 +23,9 @@ export default function Dashboard(){
                 <DashboardNav />
                 <div className="displayWindow overflow-y-scroll inner-scrollbar">
                     <div className="contentCard mb-10">
-                        <h2 className="text-xl font-bold text-app-text">Welcome, {accountInfo.userName}!</h2>
-                        <p className="text-app-text">This is your dashboard. Here you can manage your account, view your projects and studios, and access other features.</p>
-                        <p className="text-app-text">You will also find your main feed on this page.</p>
+                        <h2 className="text-xl font-bold">Welcome, {accountInfo.userName}!</h2>
+                        <p>This is your dashboard. Here you can manage your account, view your projects and studios, and access other features.</p>
+                        <p>You will also find your main feed on this page.</p>
                     </div>
                     <Feed />
                 </div>

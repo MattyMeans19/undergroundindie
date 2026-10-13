@@ -1,23 +1,25 @@
 export type UserData = {
-    fName: string, 
-    lName: string,
+    id:string,
     email: string,
-    age: number | string,
-    country: string,
-    state: string
+    password: string,
+    createdAt: string,
 }
 
 export interface AccountInfo extends UserData{
+    fName: string, 
+    lName: string,
     userName: string,
     userId: string,
     profilePic: string,
-    password: string,
     bio: string,
     primaryRole: string,
     skills: Array<string>,
     goals: Array<string>,
     projects: Array<string>,
     studios: Array<string>
+    age: number | string,
+    country: string,
+    state: string
 }
 
 export type FeedPost = {
