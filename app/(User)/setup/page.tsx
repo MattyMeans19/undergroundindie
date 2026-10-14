@@ -202,7 +202,7 @@ function SetupForm(){
                         </div>
                         <span className="text-lg text-app-muted text-end">{accountInfo.skills.length} / 10</span>
                     </div>
-                    <div className="row-start-5 row-span-4 col-start-4 col-span-2 flex flex-col justify-center gap-2">
+                    <div className="flex flex-col justify-center gap-10">
                         <label htmlFor="skill" className="text-app-secondary text-bold text-2xl text-bold text-center">Add a Goal (Max 5)</label>
                         <input name="skill" type="text" autoComplete="off" className="formInput text-2xl p-2" value={typedGoal || ""} onChange={(e) => setGoal(e.target.value)}
                             onKeyDown={(e) => {
@@ -213,9 +213,9 @@ function SetupForm(){
                             }}>
                         </input>
                         <button className="text-3xl bg-app-accent/50 hover:bg-app-accent active:bg-app-secondary px-3 rounded-lg" onClick={() => addGoal()}>+</button>
-                        <div className="flex flex-wrap gap-1">
+                        <div className="flex flex-wrap justify-center gap-1">
                             {accountInfo.goals.map((goal, index) =>(
-                                <p key={index} className="text-2xl text-app-accent">
+                                <p key={index} className="text-2xl text-center text-app-accent">
                                     {goal}{index === (accountInfo.goals.length -1) ? "." : ","}
                                 </p>
                             ))}     

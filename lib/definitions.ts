@@ -32,7 +32,15 @@ export type FeedPost = {
         commentId: string,
         authorId: string,
         content: string,
-        timestamp: string
+        commentLikes: number,
+        timestamp: string,
+        commentReplies: Array<{
+            replyId: string,
+            authorId: string,
+            content: string,
+            replyLikes: number,
+            timestamp: string
+        }>
     }>
     media: Array<{
         mediaId: string,

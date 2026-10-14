@@ -26,10 +26,10 @@
 
   [data-theme="acid-violet"] {
     --bg: #14101d;
-    --card: #221b30;
+    --card: #19102e;
     --border: #352a4a;
-    --primary: #651ea6;    /* Brightened purple primary for high contrast */
-    --secondary: #7b1ea6;  /* Medium secondary */
+    --primary: #a44ef2;    /* Brightened purple primary for high contrast */
+    --secondary: #c954ff;  /* Medium secondary */
     --accent: #E5FF66;     /* Light accent */
     --accent-hover: #EFFF99;
   }
@@ -111,19 +111,25 @@
 }
 
 .navButton{
-  @apply  px-3 py-1 rounded-md text-app-secondary bg-app-card shadow-sm shadow-app-accent;
+  @apply  px-3 py-1 rounded-md text-app-secondary bg-app-card shadow-sm shadow-app-accent hover:bg-app-accent;
+}
+.navSelected{
+  @apply px-3 py-1 rounded-md text-app-accent bg-app-card shadow-sm shadow-app-accent;
 }
 .contentWindow{
   @apply grow rounded-xl  inset-ring-4 inset-ring-app-accent/30 inset-shadow-sm inset-shadow-black flex flex-col gap-5 p-5;
 }
 .optionsWindow{
-  @apply min-h-full basis-1/6 flex flex-nowrap justify-center gap-3 md:gap-10  rounded-xl inset-ring-4 inset-ring-app-secondary/30 inset-shadow-sm inset-shadow-black p-5;
+  @apply min-h-full basis-1/6 flex flex-wrap md:flex-nowrap justify-center gap-3 md:gap-10  rounded-xl inset-ring-4 inset-ring-app-secondary/30 inset-shadow-sm inset-shadow-black p-5;
 }
 .optionButton{
   @apply text-sm md:text-2xl text-app-secondary hover:text-app-accent
 }
+.selectedOption{
+  @apply text-app-accent md:text-2xl underline;
+}
 .displayWindow{
-  @apply grow basis-5/6 rounded-sm p-10;
+  @apply basis-5/6 rounded-sm p-3 md:p-10;
 }
 .contentCard{
   @apply flex flex-col gap-5 h-fit rounded-2xl p-5 border-app-border border-2 bg-app-card text-app-primary text-center;
