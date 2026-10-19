@@ -31,6 +31,7 @@ function SetupForm(){
         country: "",
         state: "",
         age: 0,
+        tier: "free"
     })
     const [typedSkill, setSkill] = useState("");
     const [typedGoal, setGoal] = useState("");
