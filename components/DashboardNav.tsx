@@ -28,7 +28,7 @@ export default function DashboardNav() {
             <Link className={`${activeOption === "Account" ? "selectedOption" : "optionButton"}`} href="/dashboard/account">Account</Link>
             <Link className={`${activeOption === "My Projects" ? "selectedOption" : "optionButton"}`} href="/dashboard/my-projects">My Projects</Link>
             <Link className={`${activeOption === "My Studios" ? "selectedOption" : "optionButton"}`} href="/dashboard/my-studios">My Studios</Link>
-            <button className="md:absolute right-5 text-app-accent">🔔Notifications</button>
+            <button className="lg:absolute right-5 text-app-accent">🔔Notifications</button>
         </div>
     )
 }

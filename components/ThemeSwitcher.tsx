@@ -24,7 +24,7 @@ export function ThemeSwitcher() {
   if (!mounted) return null;
 
   return (
-    <div className="flex flex-wrap mg:flex-nowrap items-center gap-1 font-mono text-xs">
+    <div className="flex flex-row overflow-x-scroll inner-scrollbar lg::flex-nowrap items-center gap-1 font-mono text-xs">
       <span className="text-app-secondary mr-1">THEME::</span>
       {themes.map((t) => (
         <button

@@ -20,6 +20,7 @@ export interface AccountInfo extends UserData{
     age: number | string,
     country: string,
     state: string
+    tier: string,
 }
 
 export type FeedPost = {

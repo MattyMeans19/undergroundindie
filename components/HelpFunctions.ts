@@ -1,3 +1,5 @@
+import {redirect} from "next/navigation";
+
 export function getFormattedRelativeTime(timestamp: string): string {
   const past = new Date(timestamp).getTime();
   const now = Date.now();
@@ -26,3 +28,9 @@ export function getFormattedRelativeTime(timestamp: string): string {
 
 console.log(getFormattedRelativeTime("2026-09-06T08:00:05.449Z")); 
 // Output: "35 days ago"
+
+export function checkEnv(){
+  if (process.env.NEXT_PUBLIC_PRELAUNCH === "true") {
+    redirect('/prelaunch');
+  }
+}

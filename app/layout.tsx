@@ -19,7 +19,7 @@ export default function RootLayout({
       className={`font-tech h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">
+      <body>
         <ThemeProvider>
           {children}
         </ThemeProvider>

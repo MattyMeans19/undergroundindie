@@ -19,8 +19,8 @@ export default function NavBar() {
     }, []);
 
     return(
-        <nav className="mt-[15vh] md:mt-[6vh] flex flex-row flex-nowrap place-content-center lg:place-content-end lg:mr-6 h-full min-w-full gap-3 relative">
-            <Link href="/" className="navButton absolute top-0 left-10 cursor-pointer">Logout</Link>
+        <nav className="mt-[15vh] md:mt-[8vh] flex flex-row flex-nowrap place-content-center md:place-content-end lg:mr-6 h-full min-w-full gap-3 relative">
+            <Link href="/" className="navButton absolute top-10 md:top-0 left-37 md:left-10 cursor-pointer">Logout</Link>
             <Link href="/dashboard" className={`${activeLink === "Dashboard" ? "navSelected" : "navButton"}`}>Dashboard</Link>
             <Link href="/messages" className={`${activeLink === "Messages" ? "navSelected" : "navButton"}`}>Messages</Link>
             <Link href="/studios" className={`${activeLink === "Studios" ? "navSelected" : "navButton"}`}>Studios</Link>
