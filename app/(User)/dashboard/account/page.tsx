@@ -9,11 +9,14 @@ export default function Account(){
             <NavBar />
             <div className="contentWindow">
                 <DashboardNav />
-                <div className="displayWindow overflow-y-scroll inner-scrollbar">
+                <div className="displayWindow overflow-y-scroll inner-scrollbar flex flex-col gap-5">
                     <div className="contentCard">
                         <h2 className="text-xl font-bold text-app-text">Account Settings</h2>
                         <p className="text-app-text">Here you can manage your account settings, including your profile information, password, and other preferences.</p>
                     </div>
+                        <div className="contentCard">
+                            
+                        </div>
                 </div>
             </div>
         </div>

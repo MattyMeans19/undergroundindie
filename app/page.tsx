@@ -48,7 +48,7 @@ export default function Home() {
         <Link href="/signup" className="bg-app-accent text-app-bg hover:bg-app-accent-hover font-semibold px-5 py-2.5 rounded-md transition-colors w-full">
           Create Account
         </Link>
-        <Link href="/signin" className="text-app-text border border-app-accent/40 hover:border-app-accent hover:bg-app-accent/10 px-5 py-2.5 rounded-md transition-colors w-full">
+        <Link href="/signin" className="text-app-text content-center border border-app-accent/40 hover:border-app-accent hover:bg-app-accent/10 px-5 py-2.5 rounded-md transition-colors w-full">
           Sign In
         </Link>
       </div>

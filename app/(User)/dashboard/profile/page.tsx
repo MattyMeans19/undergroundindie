@@ -15,7 +15,7 @@ export default function Profile(){
         <div className="bg-app-bg p-2 flex flex-col gap-5 min-h-screen max-h-screen max-w-screen lg:p-3">
             <Header />
             <NavBar />
-            <div className="contentWindow">
+            <div className="contentWindow overflow-y-scroll inner-scrollbar">
                 <DashboardNav />
                 <div className="flex flex-col gap-5 grow">
                     {/* <div className="contentCard">
