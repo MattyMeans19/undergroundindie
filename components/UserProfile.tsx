@@ -36,11 +36,11 @@ export default function UserProfile(){
                 }   
             </div>
             
-            <h3 className="font-semibold text-app-secondary">Name: {accountInfo.fName} {accountInfo.lName}</h3>
-            <p className="text-app-secondary">Handle: {accountInfo.userName}</p>
-            <p className="text-app-secondary">Primary Role: {accountInfo.primaryRole}</p>
-            <p className="text-app-secondary">Age: {accountInfo.age}</p>
-            <p className="text-app-secondary max-w-full md:max-w-2xl max-h-50 overflow-y-scroll">Bio: {accountInfo.bio}</p>
+            <h3 className="font-semibold text-app-secondary"><strong className="text-app-accent">Name:</strong> {accountInfo.fName} {accountInfo.lName}</h3>
+            <p className="text-app-secondary"><strong className="text-app-accent">Handle:</strong> {accountInfo.userName}</p>
+            <p className="text-app-secondary"><strong className="text-app-accent">Primary Role:</strong> {accountInfo.primaryRole}</p>
+            <p className="text-app-secondary"><strong className="text-app-accent">Age:</strong> {accountInfo.age}</p>
+            <p className="text-app-secondary max-w-full md:max-w-2xl max-h-50 overflow-y-scroll"><strong className="text-app-accent">Bio:</strong> {accountInfo.bio}</p>
         </div>
         <div className="profileCard p-5">
             <section className="place-self-start text-start">
