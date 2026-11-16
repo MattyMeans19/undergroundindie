@@ -7,7 +7,7 @@ export default function Feed(){
     return(
         <div className="w-full flex flex-col gap-4 max-h-full">
             {feedPosts.map((post) => (
-                <div key={post.postId} className="bg-app-card text-app-secondary p-4 rounded-lg border-5 border-app-border relative flex flex-col gap-6 shadow-lg shadow-app-accent">
+                <div key={post.postId} className="bg-app-card text-app-secondary p-4 rounded-lg border-5 border-app-border relative flex flex-col gap-6 shadow-md shadow-app-accent">
                     <section className="flex flex-col mb-2 absolute top-2 right-2 p-2">
                         <button className="text-2xl p-3 rounded-full hover:bg-app-secondary/25 active:bg-app-secondary transition-colors duration-200">
                             👍

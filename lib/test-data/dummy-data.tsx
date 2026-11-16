@@ -196,3 +196,20 @@ export const profileFeed = [
     }]
   }
 ]
+
+export const accountInfo = {
+  "id": "uuid-1234",
+  "fName": "Matthew",
+  "lName": "Means",
+  "username": "Mr. Jupiter",
+  "bio": "Software engineer and tech enthusiast. Passionate about building innovative solutions and exploring new technologies.",
+  "primaryRole": "Game Developer",
+  "skills": ["JavaScript", "TypeScript", "React", "Node.js", "Python"],
+  "goals": ["Contribute to open-source projects", "Develop a successful indie game", "Learn advanced AI techniques"],
+  "projects": ["Project A", "Project B", "Project C"],
+  "studios": ["Studio X", "Studio Y"],
+  "profilePic": MRJupiter,
+  "age": 33,
+  "country": "USA",
+  "state": "New Mexico",
+}

@@ -22,13 +22,12 @@ export default function DashboardNav() {
     }, []);
 
     return(
-        <div className="optionsWindow relative">
+        <div className="flex flex-col px-2 py-10 max-h-fit gap-20 rounded-md border-3 border-app-accent bg-app-bg w-fit text-center">
             <Link className={`${activeOption === "Feed" ? "selectedOption" : "optionButton"}`} href="/dashboard">Feed</Link>
             <Link className={`${activeOption === "Profile" ? "selectedOption" : "optionButton"}`} href="/dashboard/profile">Profile</Link>
             <Link className={`${activeOption === "Account" ? "selectedOption" : "optionButton"}`} href="/dashboard/account">Account</Link>
             <Link className={`${activeOption === "My Projects" ? "selectedOption" : "optionButton"}`} href="/dashboard/my-projects">My Projects</Link>
             <Link className={`${activeOption === "My Studios" ? "selectedOption" : "optionButton"}`} href="/dashboard/my-studios">My Studios</Link>
-            <button className="lg:absolute right-5 text-app-accent">🔔Notifications</button>
         </div>
     )
 }

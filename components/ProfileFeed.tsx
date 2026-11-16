@@ -4,7 +4,7 @@ import { getFormattedRelativeTime } from "./HelpFunctions"
 
 export default function ProfileFeed(){
     return(
-        <div className="lg:p-10 w-full flex flex-col gap-4 max-h-[55vh] md:max-h-[64vh] lg:max-h-[72vh] overflow-y-scroll inner-scrollbar">
+        <div className="lg:p-10 pl-45 pr-10 flex flex-col gap-4 max-h-[55vh] md:max-h-[64vh] lg:max-h-[72vh] overflow-y-scroll inner-scrollbar">
             {profileFeed.map((post) => (
                 <div key={post.postId} className="bg-app-card text-app-secondary p-4 rounded-lg border-5 border-app-border relative flex flex-col gap-6 shadow-lg shadow-app-accent">
                     <section className="flex flex-col mb-2 absolute top-2 right-2 p-2">

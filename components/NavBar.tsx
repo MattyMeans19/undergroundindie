@@ -19,12 +19,13 @@ export default function NavBar() {
     }, []);
 
     return(
-        <nav className="mt-[15vh] md:mt-[8vh] flex flex-row flex-nowrap place-content-center md:place-content-end lg:mr-6 h-full min-w-full gap-3 relative">
-            <Link href="/" className="navButton absolute top-10 md:top-0 left-37 md:left-10 cursor-pointer">Logout</Link>
+        <nav className="bg-app-bg flex flex-row flex-wrap place-content-center p-5 border-b-3 border-app-secondary/35 min-w-full gap-3">
             <Link href="/dashboard" className={`${activeLink === "Dashboard" ? "navSelected" : "navButton"}`}>Dashboard</Link>
             <Link href="/messages" className={`${activeLink === "Messages" ? "navSelected" : "navButton"}`}>Messages</Link>
             <Link href="/studios" className={`${activeLink === "Studios" ? "navSelected" : "navButton"}`}>Studios</Link>
             <Link href="/projects" className={`${activeLink === "Projects" ? "navSelected" : "navButton"}`}>Projects</Link>
+                        <button className="text-app-accent md:absolute left-10">🔔Notifications</button>
+            <Link href="/" className="navButton md:absolute right-10 cursor-pointer">Logout</Link>
         </nav>
     )
 }

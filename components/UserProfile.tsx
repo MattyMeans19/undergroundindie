@@ -27,64 +27,15 @@ export default function UserProfile(){
     })
 
     return(
-    <div className="grow max-w-screen max-h-[50vh] md:max-h-[64vh] lg:min-h-fit overflow-y-scroll lg:overflow-auto inner-scrollbar flex flex-col lg:flex-row justify-around gap-10">
-        <div className="profileCard p-10 max-w-full">
-            <div className={`rounded-full ${accountInfo.tier == "Premium" ? "border-10 border-[#D3AF37]" : "border-0"} relative`}>
-                <Image src={MRJupiter} width={200} height={200} alt="Profile Picture" className="rounded-full md:size-80"/>
-                {accountInfo.tier == "Premium" && 
-                    <p className="absolute -bottom-11 place-self-center bg-[#D3AF37] p-1 rounded-md font-glitch">UGI</p>
-                }   
+    <div className="w-full h-full flex flex-col gap-10 p-5">
+        <div className="profileCard">
+            <Image src={MRJupiter} width={200} height={200} alt="Profile Picture" className="rounded-full size-100 border-5 border-app-border"/>
+            <div>
+                <h1 className="text-7xl font-bold">{accountInfo.userName}</h1>
+                <h2 className="text-3xl italic">{accountInfo.fName} {accountInfo.lName}</h2>    
             </div>
             
-            <h3 className="font-semibold text-app-secondary"><strong className="text-app-accent">Name:</strong> {accountInfo.fName} {accountInfo.lName}</h3>
-            <p className="text-app-secondary"><strong className="text-app-accent">Handle:</strong> {accountInfo.userName}</p>
-            <p className="text-app-secondary"><strong className="text-app-accent">Primary Role:</strong> {accountInfo.primaryRole}</p>
-            <p className="text-app-secondary"><strong className="text-app-accent">Age:</strong> {accountInfo.age}</p>
-            <p className="text-app-secondary max-w-full md:max-w-2xl max-h-50 overflow-y-scroll"><strong className="text-app-accent">Bio:</strong> {accountInfo.bio}</p>
         </div>
-        <div className="profileCard p-5">
-            <section className="place-self-start text-start">
-                <p className="text-app-secondary">Skills:</p>
-                <ul className="list-disc list-inside">
-                    {accountInfo.skills.map((skill, index) => (
-                        <li key={index} className="text-app-accent">
-                            {skill}
-                        </li>
-                    ))}
-                </ul>
-            </section>
-            <section className="place-self-start text-start">
-                <p className="text-app-secondary">Goals:</p>
-                <ul className="list-disc list-inside">
-                    {accountInfo.goals.map((goal, index) => (
-                        <li key={index} className="text-app-accent">
-                            {goal}
-                        </li>
-                    ))}
-                </ul>
-            </section>
-            <section className="place-self-start text-start">
-                <p className="text-app-secondary">Projects:</p>
-                <ul className="list-disc list-inside">
-                    {accountInfo.projects.map((project, index) => (
-                        <li key={index} className="text-app-accent">
-                            {project}
-                        </li>
-                    ))}
-                </ul>
-            </section>
-            <section className="place-self-start text-start">
-                <p className="text-app-secondary">Studios:</p>
-                <ul className="list-disc list-inside">
-                    {accountInfo.studios.map((studio, index) => (
-                        <li key={index} className="text-app-accent">
-                            {studio}
-                        </li>
-                    ))}
-                </ul>
-            </section>            
-        </div>
-
-     </div>
+    </div>
     )
-}
+}   
