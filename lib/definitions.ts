@@ -21,10 +21,12 @@ export interface AccountInfo extends UserData{
     country: string,
     state: string
     tier: string,
+    followers: Array<string>
 }
 
 export type FeedPost = {
     postId: string,
+    authorPic: string,
     authorId: string,
     content: string,
     timestamp: string,

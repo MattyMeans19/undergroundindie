@@ -12,12 +12,11 @@ export default function SignIn(){
     })
 
     return(
-        <div className="min-h-screen bg-app-bg flex flex-col gap-20">
-            <Header />
-            <div className="items-center border-3 rounded-xl border-app-border grow md:m-15 lg:m-40 content-center bg-app-card relative">
+        <div className="grow bg-app-bg flex flex-col gap-20">
+            <div className="items-center border-3 rounded-xl border-app-border grow md:m-15 lg:m-30 content-center bg-app-card relative">
                 <Link href="/" className="text-lg text-app-secondary md:left-15 md:top-5 absolute">← Back</Link>
                 <p className="text-5xl text-app-accent text-center p-10">Welcome back to the <strong className="text-app-accent font-sketch">Revolution</strong>!</p>
-                <div className="flex flex-col md:grid grid-cols-3 gap-15 md:p-15 lg:p-40 items-center h-full">
+                <div className="flex flex-col md:grid grid-cols-3 gap-10 md:p-15 lg:p-40 items-center h-full">
                     <label htmlFor="user-name" className="text-2xl text-app-secondary text-end">User Name: </label>
                     <input type="text" name="user-name" autoComplete="yes" className="formInput md:col-span-2 lg:col-span-1" onChange={(e) => setLogin({...login, username: e.target.value})}></input>
                     <label htmlFor="password" className="text-2xl text-app-secondary text-end row-start-2">Password: </label>

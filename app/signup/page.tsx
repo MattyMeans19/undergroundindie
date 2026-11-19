@@ -40,8 +40,7 @@ export default function SignUp(){
     }
 
     return(
-        <div className="bg-app-bg min-h-screen flex flex-col relative">
-            <Header />
+        <div className="bg-app-bg grow flex flex-col relative">
             <form className="grow bg-app-card p-10 m-5 md:m-20 lg:m-50 flex flex-col gap-10 lg:p-25 rounded-xl"
                 onSubmit={(e) => createAccount(e)}>
                 <h1 className="text-4xl text-app-primary text-center mb-25">Create Your Account</h1>

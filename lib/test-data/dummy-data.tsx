@@ -1,6 +1,3 @@
-import PMpic from "@/lib/test-data/PsycoMike.jpg"
-import Fox from "@/lib/test-data/unimpressedfox.jpg"
-import Gustav from "@/lib/test-data/GustavProto.png"
 import MRJupiter from "@/lib/test-data/Mr_Jupiter.png"
 
 
@@ -8,7 +5,7 @@ export const feedPosts= [
   {
     "postId": "post-101",
     "authorId": "user-8812",
-    "authorPic": PMpic,
+    "authorPic": "/profile-pics/PsycoMike.jpg",
     "content": "Just launched the first build of my new app! Excited to share updates as we keep testing features.",
     "timestamp": "2026-08-02T14:32:00Z",
     "likes": 24,
@@ -26,7 +23,7 @@ export const feedPosts= [
             "content": "Thanks! I'll be posting a beta link soon.",
             "replyLikes": 2,
             "timestamp": "2026-08-02T15:15:00Z"
-          }
+          },
         ]
 
       },
@@ -57,7 +54,7 @@ export const feedPosts= [
   {
     "postId": "post-102",
     "authorId": "user-3319",
-    "authorPic": Fox,
+    "authorPic": "/profile-pics/unimpressedfox.jpg",
     "content": "Spent the whole morning setting up new database schemas. Always satisfying when everything compiles without a hitch.",
     "timestamp": "2026-08-01T09:15:30Z",
     "likes": 12,
@@ -89,7 +86,7 @@ export const feedPosts= [
   {
     "postId": "post-103",
     "authorId": "user-5541",
-    "authorPic": Gustav,
+    "authorPic": "/profile-pics/GustavProto.png",
     "content": "Made some progress on the audio processing module. Still need to optimize the filters, but it's getting there.",
     "timestamp": "2026-07-31T18:20:00Z",
     "likes": 7,
@@ -106,7 +103,7 @@ export const profileFeed = [
   {
     "postId": "post-101",
     "authorId": "Mr. Jupiter",
-    "authorPic": MRJupiter,
+    "authorPic": "/profile-pics/Mr_Jupiter.png",
     "content": "Just launched the first build of my new app! Excited to share updates as we keep testing features.",
     "timestamp": "2026-08-02T14:32:00Z",
     "likes": 24,
@@ -153,7 +150,7 @@ export const profileFeed = [
   {
     "postId": "post-102",
     "authorId": "Mr. Jupiter",
-    "authorPic": MRJupiter,
+    "authorPic": "/profile-pics/Mr_Jupiter.png",
     "content": "Spent the whole morning setting up new database schemas. Always satisfying when everything compiles without a hitch.",
     "timestamp": "2026-08-01T09:15:30Z",
     "likes": 12,
@@ -184,7 +181,7 @@ export const profileFeed = [
   {
     "postId": "post-103",
     "authorId": "Mr. Jupiter",
-    "authorPic": MRJupiter,
+    "authorPic": "/profile-pics/Mr_Jupiter.png",
     "content": "Made some progress on the audio processing module. Still need to optimize the filters, but it's getting there.",
     "timestamp": "2026-07-31T18:20:00Z",
     "likes": 7,

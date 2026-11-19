@@ -4,9 +4,11 @@ import UserProfile from "@/components/UserProfile"
 
 export default function Profile(){
     return(
-        <div className="grow bg-app-bg w-screen p-2 flex flex-row gap-5">
+        <div className="min-h-0 min-w-0 flex-1 bg-app-bg flex flex-col overflow-hidden">
             <DashboardNav />
-            <UserProfile />
+            <div className="min-h-0 min-w-0 flex-1 p-5">
+                <UserProfile />
+            </div>
         </div>
     )
 }

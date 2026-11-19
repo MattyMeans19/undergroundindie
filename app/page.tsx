@@ -7,9 +7,8 @@ export default function Home() {
 
   return (
 <div className="min-h-screen w-full bg-app-bg flex flex-col gap-12 relative">
-  <Header />
   {/* Hero / Pitch Statement */}
-  <section className="mt-[20vh] w-full px-6 max-w-6xl mx-auto flex flex-col items-center gap-20 text-center bg-app-card/50 p-8 rounded-xl border border-app-accent/20">
+  <section className="mt-5 w-full px-6 max-w-6xl mx-auto flex flex-col items-center gap-20 text-center bg-app-card/50 p-8 rounded-xl border border-app-accent/20">
     <h1 className="text-3xl md:text-5xl font-bold text-app-primary leading-tight">
       AAA studios are <strong className="text-app-accent font-glitch">monopolizing</strong> the industry and <strong className="text-app-accent font-glitch">suffocating</strong> the  <strong className="text-app-secondary font-sketch">Soul of Creation</strong>.
     </h1>

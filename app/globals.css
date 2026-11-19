@@ -98,8 +98,7 @@
 }
 
 .inner-scrollbar {
-  scrollbar-width: 8px;
-  scrollbar-color: var(--accent) transparent;
+@apply scrollbar-thin scrollbar-thumb-app-accent scrollbar-track-app-bg;
 }
 
 .sectionRowMed{
@@ -135,5 +134,5 @@
   @apply gap-5 max-h-fit rounded-2xl p-5 border-app-border border-2 bg-app-card text-app-primary text-center;
 }
 .profileCard{
-  @apply bg-app-primary/30 border-app-border border-5 rounded-lg md:text-3xl w-full gap-10 py-10 items-center flex flex-row flex-nowrap;
+  @apply bg-app-primary/30 border-app-border border-5 rounded-lg md:text-3xl w-full gap-10 py-10 px-15 items-center flex flex-row flex-nowrap;
 }
