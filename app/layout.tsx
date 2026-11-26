@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
-import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
 
@@ -25,7 +24,6 @@ export default function RootLayout({
       <body className="flex flex-col h-screen overflow-y-clip">
         <ThemeProvider>
           <Header />
-          <NavBar />
           {children}
           <Footer />
         </ThemeProvider>

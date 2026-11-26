@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar"
 export default function Messages(){
     return(
         <div className="bg-app-bg flex flex-col gap-5 min-h-screen min-w-screen lg:p-3">
+            <NavBar />
             <div className="contentWindow">
                 <div className="displayWindow overflow-y-scroll inner-scrollbar">
                     <div className="contentCard">
