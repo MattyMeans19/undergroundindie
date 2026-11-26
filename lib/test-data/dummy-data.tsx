@@ -210,3 +210,23 @@ export const accountInfo = {
   "country": "USA",
   "state": "New Mexico",
 }
+
+export const projects =
+  [
+    {
+      "id": "project001",
+      "title": "Project Zero",
+      "image": "/project-pics/PZ.png",
+      "role": "Lead Developer",
+      "description": "Work together with your crew to bring a space station back online while fending off waves of alien invaders in this cooperative space shooter."
+    },
+    {
+      "id": "project002",
+      "title": "GameZone",
+      "image": "/project-pics/GameZone.png",
+      "role": "Lead Developer",
+      "description": "A fast-paced multiplayer game where players compete in various challenges and tournaments."
+    }
+   
+  ]
+  

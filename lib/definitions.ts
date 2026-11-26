@@ -117,3 +117,11 @@ export type prelaunchUser = {
     tier: string,
     timestamp: string
 }
+
+export type profileProject = {
+    id: string,
+    title: string,
+    image: string,
+    role: string,
+    description: string
+}

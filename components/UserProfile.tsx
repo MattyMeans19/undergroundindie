@@ -1,8 +1,10 @@
-import { AccountInfo } from "@/lib/definitions"
+import { AccountInfo} from "@/lib/definitions"
 import MRJupiter from "@/lib/test-data/Mr_Jupiter.png"
 import { useState } from "react"
 import Image from "next/image"
 import ProfileFeed from "./ProfileFeed"
+import ProfileProjects from "./Profile-Projects"
+import { projects } from "@/lib/test-data/dummy-data"
 
 export default function UserProfile(){
     const [accountInfo, setAccountInfo] = useState<AccountInfo>({
@@ -40,8 +42,18 @@ export default function UserProfile(){
         setEditBio(false)
     }
 
+    function deleteSkill(skill: string){
+        setNewSkills(prev => prev.filter(item => item != skill))
+        setAccountInfo({...accountInfo, skills: newSkills})
+    }
+
+    function deleteGoal(goal: string){
+        setNewGoals(prev => prev.filter(item => item != goal))
+        setAccountInfo({...accountInfo, goals: newGoals})
+    }
+
     return(
-        <div className="max-w-screen min-h-0 flex flex-1 flex-row gap-5 p-5">
+        <div className="max-w-screen min-h-0 overflow-y-scroll inner-scrollbar lg:overflow-y-hidden lg:flex flex-1 flex-col lg:flex-row gap-5 md:p-5">
             <div className="">
                 <div className="w-full flex flex-col items-center">
                     <Image src={MRJupiter} width={200} height={200} alt="Profile Picture" 
@@ -60,15 +72,15 @@ export default function UserProfile(){
                     <span className="text-2xl text-app-secondary text-center">Followers: {accountInfo.followers.length}</span>
                 </div>
             </div>
-            <div className="min-h-0 min-w-0 flex-1 bg-app-secondary/20 border-5 rounded-lg border-app-border flex flex-col gap-5 p-5 overflow-hidden">
+            <div className="flex-1 min-h-0 bg-app-secondary/20 border-5 rounded-lg border-app-border flex flex-col gap-5 md:p-5 overflow-hidden">
                     <div className="flex flex-row gap-5 w-full border-b-5 border-app-accent/20 text-2xl justify-around shrink-0">
                         <button onClick={() => setTab("About")} className={`${tab === "About" ? "text-app-accent" : "text-app-secondary"}`}>About</button>
                         <button onClick={() => setTab("Posts")} className={`${tab === "Posts" ? "text-app-accent" : "text-app-secondary"}`}>Posts</button>
                         <button onClick={() => setTab("Projects")} className={`${tab === "Projects" ? "text-app-accent" : "text-app-secondary"}`}>Projects</button>
                     </div>
-                    <div className="min-h-0 flex flex-1 flex-col">
+                    <div className="flex flex-1 min-h-0 flex-col">
                         {tab === "About" && (
-                            <div className="min-h-0 flex flex-1 flex-col gap-5 p-5">
+                            <div className="flex flex-1 flex-col gap-5 p-5">
                                 <div className="flex flex-col gap-2">
                                     <h1 className="text-2xl font-bold text-app-primary">Bio:</h1>
                                     {editBio ?
@@ -80,8 +92,7 @@ export default function UserProfile(){
                                         <button className="bg-app-accent w-fit self-end hover:bg-app-accent-hover text-white py-2 px-4 rounded-xl" onClick={() => saveBio()}>
                                             Save
                                         </button>
-                                    </div>
-                                        
+                                    </div>  
                                     :
                                     <div className="flex flex-col gap-2">
                                         <span className="text-app-secondary text-2xl bg-app-card p-10 border-3 border-app-border rounded-2xl">{accountInfo.bio}</span>
@@ -90,21 +101,21 @@ export default function UserProfile(){
                                         </button>
                                     </div> }
                                 </div>
-                                <div className="min-h-0 grid flex-1 grid-cols-2 grid-rows-[auto_minmax(0,1fr)] gap-3">
+                                <div className="grid flex-1 grid-cols-2 grid-rows-[auto_minmax(0,1fr)] gap-3">
                                     <h1 className="text-3xl text-app-secondary underline">Skills</h1>
                                     <h1 className="text-3xl text-app-secondary underline">Goals</h1>
-                                    <div className="contentWindow min-h-0 overflow-hidden bg-app-primary/30 text-app-accent">
-                                        <ul className="min-h-0 flex flex-1 flex-col gap-5 overflow-y-auto inner-scrollbar">
+                                    <div className="contentWindow overflow-hidden bg-app-primary/30 text-app-accent">
+                                        <ul className="flex flex-1 flex-col gap-5 overflow-y-auto inner-scrollbar">
                                             {newSkills.map((skill, index) => (
-                                                <li key = {index} className=" text-3xl flex flex-row flex-nowrap justify-between">
+                                                <li key = {index} className="lg:text-3xl flex flex-row flex-nowrap justify-between">
                                                     {skill}
-                                                    <button className="self-end" onClick={() =>(setNewSkills(prev => prev.filter(item => item != skill)))}>🗑️</button>
+                                                    <button className="self-end" onClick={() =>(deleteSkill(skill))}>🗑️</button>
                                                 </li>
                                             ))}
                                         </ul>
-                                        <div className="flex shrink-0 flex-row flex-nowrap justify-around">
+                                        <div className="flex shrink-0 flex-col md:flex-row flex-nowrap justify-around">
                                             <label htmlFor="newSkill">Add Skill: </label>
-                                            <input id="newSkill" value={newSkill} className="bg-app-bg/20 w-md border-app-border/40 border-5 text-2xl text-center"
+                                            <input id="newSkill" value={newSkill} className="bg-app-bg/20 md:w-md border-app-border/40 border-5 text-2xl text-center"
                                             onChange={(e) => (setNewSkill(e.target.value))}></input>
                                             {newSkill != "" &&
                                                 <button onClick={() => {
@@ -117,20 +128,20 @@ export default function UserProfile(){
                                         </div>
                                           
                                     </div>
-                                    <div className="contentWindow min-h-0 overflow-hidden bg-app-primary/30 text-app-accent">
-                                        <ul className="min-h-0 flex flex-1 flex-col gap-5 overflow-y-auto inner-scrollbar">
+                                    <div className="contentWindow overflow-hidden bg-app-primary/30 text-app-accent">
+                                        <ul className="flex flex-1 flex-col gap-5 overflow-y-auto inner-scrollbar">
                                             {newGoals.map((goal, index) => (
-                                                <li key = {index} className=" text-3xl flex flex-row flex-nowrap justify-between">
+                                                <li key = {index} className="lg:text-3xl flex flex-row flex-nowrap justify-between">
                                                     {goal}
-                                                    <button className="self-end" onClick={() => (setNewGoals(prev => prev.filter(item => item != goal)))}>🗑️</button>
+                                                    <button className="self-end" onClick={() => (deleteGoal(goal))}>🗑️</button>
                                                 </li>
                                             ))}
                                         </ul>
-                                         <div className="flex shrink-0 flex-row flex-nowrap justify-around">
+                                         <div className="flex shrink-0 flex-col md:flex-row flex-nowrap justify-around">
                                             <label htmlFor="newGoal">Add Goal: </label>
-                                            <input id="newGoal" value={newGoal} className="bg-app-bg/20 w-md border-app-border/40 border-5 text-2xl text-center"
+                                            <input id="newGoal" value={newGoal} className="bg-app-bg/20 md:w-md border-app-border/40 border-5 text-2xl text-center"
                                             onChange={(e) => (setNewGoal(e.target.value))}></input>
-                                            {newSkill != "" &&
+                                            {newGoal != "" &&
                                                 <button onClick={() => {
                                                 setNewGoals((prev) => [...prev, newGoal]);
                                                 setNewGoal("")
@@ -144,13 +155,13 @@ export default function UserProfile(){
                             </div>
                         )}
                         {tab === "Posts" && (
-                            <div className="min-h-0 flex-1 overflow-y-auto inner-scrollbar">
+                            <div className="flex-1 min-h-0 overflow-y-auto inner-scrollbar">
                                 <ProfileFeed />
                             </div>
                         )}
                         {tab === "Projects" && (
-                            <div className="flex flex-col gap-5 p-5">
-                                <h1 className="text-4xl font-bold text-app-primary">Projects</h1>
+                            <div className="flex-1 min-h-0 overflow-y-auto inner-scrollbar p-5">
+                                <ProfileProjects projects={projects}/>
                             </div>
                         )}
                     </div>
